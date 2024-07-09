@@ -24,7 +24,6 @@ export default function Navbarr(params) {
     { name: "About", to: "about", className: "About" }, // Corrected className from 'About' to 'about'
     { name: "Cities", to: "cities", className: "cities" },
     { name: "Testimonials", to: "testimonials", className: "testimonials" },
-    { name: "Sponsors", to: "sponsors", className: "sponsors" },
   ];
 
   const button = [
@@ -79,14 +78,14 @@ export default function Navbarr(params) {
                 className={`${item.className} ${
                   selectedItem === item.name ? "selected" : ""
                 }`} // Add 'selected' class if item is selected
-                onClick={() => handleClick(item.name, window.open('https://forms.gle/ba4Sa3Q1MxGDB1yFA','_blank'))} // Handle click event and navigate to /register
+                onClick={() => handleClick(item.name, window.open('https://docs.google.com/forms/u/1/d/1Pv2CtUuLLI1D_DV5jt9AhJPc18mlFJcY6TdTmmqWwY4/edit?usp=drive_web','_blank'))} // Handle click event and navigate to /register
                 id={item.id}
               >
                 <Link
                   to={item.to}
                   smooth={true}
                   duration={500}
-                  onClick={() => handleClick(item.name, window.open('https://forms.gle/ba4Sa3Q1MxGDB1yFA','_blank'))}
+                  onClick={() => handleClick(item.name, window.open('https://docs.google.com/forms/u/1/d/1Pv2CtUuLLI1D_DV5jt9AhJPc18mlFJcY6TdTmmqWwY4/edit?usp=drive_web','_blank'))}
                 >
                   {item.name}
                 </Link>
