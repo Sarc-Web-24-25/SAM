@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import './about.css';
 import Aos from 'aos'; // Import aos library for animations
 import 'aos/dist/aos.css'; // Aos styles
+import samImage from '../../assets/about_sam.png';
+import { Zoom } from 'react-awesome-reveal';
 
 export default function About() {
     const [isVisible, setIsVisible] = useState(false);
@@ -21,13 +23,20 @@ export default function About() {
 
     return (
         <div className={`about ${isVisible ? 'fade-in' : ''}`} id="about" data-aos="fade-up">
+            <div className="sam-image">
+                <img src={samImage} alt="About SAM Image" />
+            </div>
             <div className="aboutHeading">
-                <p>ABOUT SAM</p>
+            <Zoom>
+            <h1 style={{ pointerEvents: 'none' }}>
+                <span className="green">ABOUT SAM</span>
+            </h1>
+            <p></p>
+        </Zoom>
             </div>
             <div className="aboutContent">
                 <p>
-                The Student Alumni Meet in the city is aimed to be a welcome event for
-                    successful candidates who will be joining IITs and for current IITB students. It is
+                The Student Alumni Meet in the city is aimed to be a welcome event for IITB students. It is
                     an opportunity for them to get guidance from the alumni of IIT Bombay. It will be
                     an event where they will get to know ‘what life looks like after getting out of IIT
                     and also what is the current scenario of life in the institute’ from the experiences

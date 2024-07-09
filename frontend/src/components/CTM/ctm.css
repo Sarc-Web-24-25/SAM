@@ -10,6 +10,8 @@
     font-size: 3.8rem;
     font-weight: 700;
     text-align: center;
+    z-index: 100;
+    margin-bottom: 20px;
 }
 
 .profiles {
@@ -21,13 +23,15 @@
 }
 
 .profile-card {
-    background:antiquewhite;
+    background:#3f3f40;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 10px;
     padding: 20px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    z-index: 100;
+    margin-bottom:30px;
 }
 
 .profile-card:hover {
@@ -50,7 +54,7 @@
 .profile-name {
     font-size: 1.2em;
     margin: 0;
-    color: #333;
+    color: white;
 }
 
 @media (max-width: 600px) {
